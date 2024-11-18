@@ -21,7 +21,7 @@ function Home() {
 
   const fetchProducts = async () => {
     try {
-      const url = "https://user-authentication-7cj0feiks-niru1pam2s-projects.vercel.app/products";
+      const url = "https://user-authentication-khaki-one.vercel.app/products";
       const headers = {
         headers: {
           Authorization: localStorage.getItem("token"),
