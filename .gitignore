@@ -1,0 +1,59 @@
+# Node.js
+/backend/node_modules
+/frontend/node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Runtime files
+pids
+*.pid
+*.seed
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build directories (React)
+build/
+dist/
+
+# Dependency directories
+bower_components/
+
+# NPM package and yarn lock files (to avoid version mismatches)
+package-lock.json
+yarn.lock
+
+# Next.js build (if applicable)
+.next/
+
+# React Native (if applicable)
+.expo/
+
+# MongoDB data files (if applicable)
+*.db
+*.bak
+
+# Temporary files
+*.tmp
+*.swp
