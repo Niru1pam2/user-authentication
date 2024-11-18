@@ -9,20 +9,19 @@ require("dotenv").config();
 require("./models/db");
 const PORT = process.env.PORT || 8080;
 
-const corsOptions = {
-  origin: "https://user-authentication-jxfvax8wr-niru1pam2s-projects.vercel.app", // Frontend domain
-  methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
-  credentials: true, // If you're using cookies or authorization headers
-};
+
 
 //middlewares
-app.use(cors(corsOptions));
+app.get('/ping', (req, res) => {
+    res.send('PONG');
+});
+
 app.use(bodyParser.json());
-app.use("/auth", AuthRouter);
-app.options('*', cors(corsOptions));
-app.use("/products", ProductRouter);
+app.use(cors());
+app.use('/auth', AuthRouter);
+app.use('/products', ProductRouter);
+
 
 app.listen(PORT, () => {
-  console.log(`server running on port ${PORT}`);
-});
+    console.log(`Server is running on ${PORT}`)
+})
