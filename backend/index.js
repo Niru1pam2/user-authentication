@@ -20,6 +20,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use("/auth", AuthRouter);
+app.options('*', cors(corsOptions));
 app.use("/products", ProductRouter);
 
 app.listen(PORT, () => {
