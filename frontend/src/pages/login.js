@@ -22,7 +22,7 @@ function Login() {
       return handleError("all fields are required");
     }
     try {
-      const url = "http://localhost:8080/auth/login";
+      const url = "https://user-authentication-7cj0feiks-niru1pam2s-projects.vercel.app/auth/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {
